@@ -1,0 +1,27 @@
+linters:
+  enable:
+    - gofmt
+    - govet
+    - errcheck
+    - staticcheck
+    - gosimple
+    - ineffassign
+    - unused
+    - misspell
+    - revive
+  disable:
+    - exhaustruct
+
+issues:
+  exclude-dirs:
+    - vendor
+  max-issues-per-linter: 0
+  max-same-issues: 0
+
+linters-settings:
+  staticcheck:
+    checks: ["all"]
+  revive:
+    rules:
+      - name: exported
+        severity: warning
